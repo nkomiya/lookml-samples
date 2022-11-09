@@ -10,14 +10,14 @@ view: pop_union_order_items {
         *,
         1 AS period_flag
       FROM
-        thelook.order_items
+        bigquery-public-data.thelook.order_items
 
       UNION ALL
       SELECT
         *,
         2 AS period_flag
       FROM
-        thelook.order_items
+        bigquery-public-data.thelook.order_items
 
       -- 以下、pattern 4 でのみ利用
 
@@ -26,7 +26,7 @@ view: pop_union_order_items {
         *,
         3 AS period_flag
       FROM
-        thelook.order_items
+        bigquery-public-data.thelook.order_items
     ;;
   }
 
